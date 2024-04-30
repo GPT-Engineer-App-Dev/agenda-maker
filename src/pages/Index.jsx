@@ -32,19 +32,19 @@ const Index = () => {
   const bg = useColorModeValue('gray.100', 'gray.700');
 
   return (
-    <Box p={8} maxW="500px" mx="auto" bg={bg}>
+    <Box p={12} maxW="500px" mx="auto" bg={bg}>
       <Input
         placeholder="Add a new task..."
         value={input}
         onChange={(e) => setInput(e.target.value)}
         onKeyPress={(e) => e.key === 'Enter' && handleAddTask()}
         size="lg"
-        mb={4}
+        mb={6}
       />
       <Button leftIcon={<FaPlus />} colorScheme="blue" onClick={handleAddTask} w="full" mb={4}>
         Add Task
       </Button>
-      <List spacing={3}>
+      <List spacing={5}>
         {tasks.map(task => (
           <ListItem key={task.id} d="flex" justifyContent="space-between" alignItems="center">
             <IconButton
