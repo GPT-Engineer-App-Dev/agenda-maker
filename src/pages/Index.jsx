@@ -61,6 +61,7 @@ const Index = () => {
               onClick={() => handleRemoveTask(task.id)}
               colorScheme="red"
               aria-label="Delete Task"
+              m={4}  // Added margin
             />
           </ListItem>
         ))}
